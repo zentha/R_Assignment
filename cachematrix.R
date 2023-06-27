@@ -4,9 +4,7 @@
 ## Write a short comment describing this function
 ## Creates a special matrix object that can cache its inverse
 makeCacheMatrix <- function( m = matrix() ) {
-  
-  ## Initialize the inverse property
-  i <- NULL
+  i <- NULL ## Initialize the inverse property
   
   ## Method to set the matrix
   set <- function( matrix ) {
@@ -15,26 +13,16 @@ makeCacheMatrix <- function( m = matrix() ) {
   }
   
   ## Method the get the matrix
-  get <- function() {
-    ## Return the matrix
-    m
-  }
+  get <- function() {m }
   
   ## Method to set the inverse of the matrix
-  setInverse <- function(inverse) {
-    i <<- inverse
-  }
+  setInverse <- function(inverse) { i <<- inverse }
   
   ## Method to get the inverse of the matrix
-  getInverse <- function() {
-    ## Return the inverse property
-    i
-  }
+  getInverse <- function() { i }
   
   ## Return a list of the methods
-  list(set = set, get = get,
-       setInverse = setInverse,
-       getInverse = getInverse)
+  list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
 
