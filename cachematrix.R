@@ -34,9 +34,7 @@ cacheSolve <- function(x, ...) {
   m <- x$getInverse()
   
   ## Just return the inverse if its already set
-  if( !is.null(m) ) {
-    return(m)
-  }
+  if( !is.null(m) ) {return(m)}
   
   ## Get the matrix from our object
   data <- x$get()
